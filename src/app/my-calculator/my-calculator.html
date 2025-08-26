@@ -1,3 +1,4 @@
+<h1 class="calculator__title">Калькулятор</h1>
 <div class="calculator">
   <input type="number" class="calculator__input" [(ngModel)]="first">
   <select class="calculator__select" [(ngModel)]="operation">
@@ -5,7 +6,7 @@
   </select>
   <input type="number" class="calculator__input" [(ngModel)]="second">
   
-  <span class="calculator__result">{{result ? result : 'Нажмите Расчитать'}}</span>
+  <span class="calculator__result" [ngClass]="{'success': result, 'error': !result}">{{result ? result : 'Нажмите "Расчитать"!'}}</span>
   
-  <button (click)="calc()">Расчитать</button>
+  <button class="calculator__btn" (click)="calc()">Расчитать</button>
 </div>
