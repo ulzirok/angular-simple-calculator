@@ -1,0 +1,105 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 2px solid black;
+  border-radius: 30px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 50px;
+  background-color:aliceblue;
+  
+  &__title {
+    text-align: center;
+  }
+  
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  &__input {
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+  }
+  
+  &__select {
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: transparent;
+  }
+  
+  &__result {
+    font-size: 20px;
+    font-weight: bold;
+    
+    &.success {
+      color: green;
+    }
+    
+    &.error {
+      color: red;
+    }
+    
+    span {
+      color: black;
+    }
+  }
+  
+  &__modif {
+      font-size: 16px;
+      outline: none;
+      font-weight: bold;
+      width: 100px;
+      height: 30px;
+    }
+  
+  &__history {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  
+      &-title {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    
+  &__btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  &__btn {
+    outline: none;
+    width: fit-content;
+    height: 50px;
+    // margin: 0 auto;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: seagreen;
+    padding: 15px;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: rgb(218, 115, 64);
+      }
+    
+      &:active {
+        transform: scale(1.1);
+      }
+  }
+}
